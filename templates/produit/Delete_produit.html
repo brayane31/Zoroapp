@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supprimer_produit</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='./Style.css')}}">
+</head>
+<body>
+<section class="header">
+    {%include './partials/Header.html'%}
+    <div class="main-header2">
+        {%include './partials/Navbarproduit.html'%}
+        <div class="header-container2A">
+            <div class="yA">
+                <h2 class="h2b"><strong>Suppression de produit</strong></h2>
+            </div>
+            <div class="delete">
+                <h2 class="deleteh2">Vous êtes sur le point de supprimer le produit n°{{id_prod[0]}}. Êtes-vous
+                    sûr de vouloir continuer ?</h2>
+            </div>
+
+            <div class="buttonA">
+                <button class="button1A"><a href="{{url_for('Listproduit')}}">Retour</a></button>
+                <a class="button2A" href="/delete_produit/{{id_prod[0]}}">Supprimé</a>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

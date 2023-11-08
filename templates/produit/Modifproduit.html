@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modif_produit</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='Style.css')}}">
+</head>
+<body>
+    <section class="header">
+        {%include './partials/Header.html'%}
+        <div class="main-header2">
+            {%include './partials//Navbarproduit.html'%}
+            <div class="header-container2A">
+                <div class="yA">
+                   <h2 class="h2b"> <strong>Modifier un nouveau produit</strong></h2>
+                </div>
+                <form action=" {{url_for('Modifier',id=data[0])}} " method="POST">
+                    <input type="hidden" name="id" value="{{data[0]}}">
+                    <div class="form-headerA">
+                        <div class="nameA">
+                            <div class="dA"><label for="Nom">Nom :</label></div>
+                            <input class="Value" type="text" name="NomProduit" value="{{data[1]}}">
+                        </div>
+                        <div class="nameA">
+                            <div class="dA"><label for="Categorie">Categorie :</label></div>
+                            <select class="Value" name="CatProduit" required>
+                                {% for row in list %}
+                                {% if row[2]== data[2] %}
+                                <option value="{{ row[2]}}" selected> {{ row[2]}} </option>
+                                {% else %}
+                                     <option value="{{ data[2]}}" > {{ row[2]}}  </option>
+                                {% endif %}
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="nameA">
+                            <div class="dA"><label for="Prix">Prix :</label></div>
+                            <input class="Value" type="number" name="PrixUnitaire" value="{{data[3]}}">
+                        </div>
+
+                    </div>
+                    <div class="buttonA">
+                       <button class="button1A"><a href="{{url_for('Listproduit')}}">Retour</a></button>
+                        <button class="button2A" type="submit">Valider</button>
+                    </div>
+               </form>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,348 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+/* ..........................ACCUEIL..................... */
+  /* Header */
+
+.header{
+  height: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-header1{
+  height: 60px;
+  width: 100%;
+  background-color: rgb(91,155,213);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+
+
+}
+
+
+.main-header2{
+  height: 540px;
+  width: 100%;
+ /* border: 2px solid yellow; */
+ display: flex;
+ flex-direction: row;
+}
+
+.header-container{
+  height: 540px;
+  width: 20%;
+  background-color: rgb(91,155,213);
+}
+
+.header-container2{
+  height: 540px;
+  width: 80%;
+  background-color: rgb(217,217,217);
+
+}
+
+.container1{
+  width: 100%;
+  height: 40%;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  text-align: center;
+
+}
+
+.main1{
+  width: 99%;
+  height: 15%;
+ border: 2px solid rgb(91,155,213);
+ background-color: white;
+ border-radius: 5px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+
+}
+
+.main12{
+    width: 99%;
+    height: 15%;
+    border: 2px solid rgb(91,155,213);
+    border-radius: 5px;
+   background-color: grey;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+  }
+
+h2{
+  color: white;
+  margin-left: 10px;
+}
+
+p{
+  color: black;
+}
+
+/* ................................Main enregistrement magasin et liste magasin ..................................*/
+
+.div-container{
+    height: 80px;
+    width: 95%;
+ /* background-color: brown; */
+ display: flex;
+ justify-content: flex-end;
+ align-items: center;
+}
+
+.div-container2{
+    height: 80px;
+    width: 80%;
+ /* background-color: brown; */
+ display: flex;
+ justify-content: flex-start;
+ align-items: center;
+ margin-left: 100px;
+}
+
+.div-container3{
+    height: 30px;
+    width: 30%;
+    border-radius: 10px;
+ /* background-color: brown; */
+ display: flex;
+ justify-content: flex-start;
+ align-items: center;
+ margin-left: 100px;
+ background-color: greenyellow;
+}
+
+.button{
+    height: 35px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: greenyellow;
+}
+
+
+
+table{
+    border-collapse: collapse;
+    font-family: arial, sans-serif;
+    width: 80%;
+    margin-left: 100px;
+
+}
+
+td {
+  border: 1px solid white;
+  text-align: center;
+  height: 40px;
+  /* padding: 8px; */
+}
+
+
+tr:nth-child(even){
+  background-color: rgb(210,222,239);
+}
+
+.tete{
+    background-color: rgb(91,155,213);
+}
+
+.Ad{
+    background-color: rgb(234,239,247);
+
+}
+
+
+.rien{
+    background-color: white;
+}
+
+
+/*................ Main Ajout magasin................. */
+
+/* Ajout magasin main header */
+.header-container2A{
+    height: 540px;
+    width: 80%;
+    background-color: rgb(217,217,217);
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+
+  }
+
+  /* Ajout magasin main*/
+
+  .yA{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.h2b{
+    color: black;
+  }
+
+
+.form-headerA{
+    width: 100%;
+    height: 180px;
+    /* border: 2px solid rgb(255, 136, 0); */
+
+}
+
+.nameA{
+    width: 80%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    /* border: 2px solid green; */
+}
+
+
+.form-headerA .nameA input{
+
+    width: 50%;
+    height: 35px;
+    border-radius: 30px;
+}
+
+.dA{
+    width: 15%;
+    height: 35px;
+}
+
+.buttonA{
+    width: 68%;
+    height: 40px;
+    /* background-color: black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button1A{
+    width: 100px;
+    height: 40px;
+    background-color: rgb(192,0,0);
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.button2A{
+    width: 100px;
+    height: 40px;
+    background-color: rgb(112,173,71);
+    border-radius: 10px;
+}
+
+
+/* ..........................Connexion..................... */
+  /* main */
+
+
+  .main-header2C{
+    height: 400px;
+    width: 100%;
+    /* border: 2px solid yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.interieur{
+    height: 250px;
+    width: 20%;
+    border-radius: 40px;
+    background-color: rgb(91,155,213);
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+.button1 a{
+    color: yellowgreen;
+}
+
+.input{
+
+    width: 200px;
+    height: 30px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+/*................ Page delete................. */
+
+.delete{
+  height: 82px;
+  width: 50%;
+  background-color: rgb(248,203,173);
+  border-radius: 20px;
+ text-align: center;
+  margin-left: 90px;
+  margin-bottom: 30px;
+}
+
+
+/*................ Modifier supprimer................. */
+
+tbody tr td:last-child div{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 5px;
+  /* border: 2px solid green; */
+}
+
+tbody tr td:last-child div button{
+  height: 90%;
+  width: 45%;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+tbody tr td:last-child div button a{
+color: white;
+text-decoration: none;
+}
+
+.modif{
+  width: 40%;
+  height: 99%;
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(245,190,87);
+
+}
+
+.suppr{
+  width: 40%;
+  height: 99%;
+  display: flex;
+  background-color: rgb(192,0,0);
+}

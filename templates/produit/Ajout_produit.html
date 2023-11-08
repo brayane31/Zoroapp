@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajout_produit</title>
+    <link rel="stylesheet" href="static/Style.css">
+</head>
+<body>
+    <section class="header">
+        {%include './partials/Header.html'%}
+        <div class="main-header2">
+            {%include './partials//Navbarproduit.html'%}
+            <div class="header-container2A">
+                <div class="yA">
+                   <h2 class="h2b"> <strong>Ajouter un nouveau produit</strong></h2>
+                </div>
+                <form action=" {{url_for('Ajoutproduit')}} " method="post">
+                    <div class="form-headerA">
+                        <div class="nameA">
+                            <div class="dA"><label for="Nom">Nom :</label></div>
+                            <input class="Value" type="text" name="NomProduit" required>
+                        </div>
+                        <div class="nameA">
+                            <div class="dA"><label for="Categorie">Categorie :</label></div>
+                            <select class="Value" name="CatProduit" required>
+                                <option value="#" selected> Selectionnez une catégorie </option>
+                                <option value="Vetement" > Vetement </option>
+                                <option value="Accesoires" > Accesoires </option>
+                                <option value="Aliments" > Aliments </option>
+                            </select>
+                        </div>
+                        <div class="nameA">
+                            <div class="dA"><label for="Prix">Prix :</label></div>
+                            <input class="Value" type="number" name="PrixUnitaire" required>
+                        </div>
+
+                    </div>
+                    <div class="buttonA">
+                       <button class="button1A"><a href="{{url_for('Listproduit')}}">Retour</a></button>
+                        <button class="button2A" type="submit">Valider</button>
+                    </div>
+               </form>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
