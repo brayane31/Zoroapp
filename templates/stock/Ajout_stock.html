@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajout_stock</title>
+    <link rel="stylesheet" href="static/Style.css">
+</head>
+<body>
+    <section class="header">
+        {%include './partials/Header.html'%}
+        <div class="main-header2">
+            {%include './partials/Navbarstock.html'%}
+            <div class="header-container2A">
+                <div class="yA">
+                   <h2 class="h2b"> <strong>Ajouter un nouveau stock</strong></h2>
+                </div>
+                <form action=" {{url_for('Ajoutstock')}} " method="POST">
+                     <div class="form-headerA">
+                        <div class="formulaire">
+                            <label for="Id_magasin">Magasin :</label><br>
+                            <label for="Id_magasin">Produit :</label><br>
+                            <label for="Quantité_stocks">Quantité stocks :</label>
+                            <!-- <label for="Prix">Prix:</label> -->
+                        </div>
+                        <div class="box">
+                             <div class="input6">
+                                <select name="IdMagasin" required>
+                                     <option value="message 1">--- Choisissez un magasin ---</option>
+                                     {% for listemage in listemage %}
+                                     <option value="{{listemage.IdMagasin}}">{{listemage.NomMagasin}} </option>
+                                     {% endfor %}
+                                     <!-- Ajoutez ici d'autres options de magasins au besoin -->
+                                </select>
+                             </div>
+                             <div class="input7">
+                                <select name="IdProduit" required>
+                                    <option value="message 2">--- Choisissez un produit --- </option>
+                                    {% for listeprode in listeprode %}
+                                    <option value="{{listeprode.IdProduit}}">{{listeprode.NomProduit}} </option>
+                                    {% endfor %}
+                                    <!-- Ajoutez ici d'autres options de produits au besoin -->
+                                </select>
+                             </div>
+                             <div class="input8"><input type="text" name="Quantitestock" placeholder="" required></div>
+                        </div>
+                    </div>
+                    <div class="buttonA">
+                       <button class="button1A"><a href="{{url_for('Liststock')}}">Retour</a></button>
+                        <button class="button2A" type="submit">Valider</button>
+                    </div>
+               </form>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

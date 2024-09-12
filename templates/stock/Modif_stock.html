@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modif_stock</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='Style.css')}}">
+</head>
+<body>
+    <section class="header">
+        {%include './partials/Header.html'%}
+        <div class="main-header2">
+            {%include './partials/Navbarstock.html'%}
+            <div class="header-container2A">
+                <div class="yA">
+                   <h2 class="h2b"> <strong>Modifier un nouveau stock</strong></h2>
+                </div>
+                <form action=" {{url_for('Modifiermag',id=data[0])}} " method="POST">
+                    <input type="hidden" name="IdMagasin" value="{{data[0]}}">
+                    <div class="form-headerA">
+                        <div class="nameA">
+                            <div class="dA"><label for="Nom">Nom :</label></div>
+                            <input class="Value" type="text" name="NomMagasin" value="{{data[1]}}">
+                        </div>
+                        <div class="nameA">
+                            <div class="dA"><label for="Adresse">Adresse :</label></div>
+                            <input class="Value" type="text" name="AdresseMagasin" value="{{data[2]}}">
+                        </div>
+                        <div class="nameA">
+                            <div class="dA"><label for="Telephone">Telephone :</label></div>
+                            <input class="Value" type="text" name="Telephone" value="{{data[3]}}">
+                        </div>
+                         <div class="nameA">
+                            <div class="dA"><label for="Mail">Mail :</label></div>
+                            <input class="Value" type="text" name="mail" value="{{data[4]}}">
+                        </div>
+
+                    </div>
+                    <div class="buttonA">
+                       <button class="button1A"><a href="{{url_for('Liststock')}}">Retour</a></button>
+                        <button class="button2A" type="submit">Valider</button>
+                    </div>
+               </form>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

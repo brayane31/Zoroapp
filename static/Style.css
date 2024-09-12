@@ -228,6 +228,7 @@ tr:nth-child(even){
     height: 35px;
 }
 
+
 .buttonA{
     width: 68%;
     height: 40px;
@@ -346,3 +347,8 @@ text-decoration: none;
   display: flex;
   background-color: rgb(192,0,0);
 }
+
+
+
+/*................ Ajout stock................. */
+

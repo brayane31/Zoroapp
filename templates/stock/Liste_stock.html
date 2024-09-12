@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste_stock</title>
+    <link rel="stylesheet" href="static/Style.css">
+</head>
+<body>
+    <section class="header">
+        {%include '/partials/Header.html'%}
+        <div class="main-header2">
+             {%include './partials/Navbarstock.html'%}
+            <div class="header-container2">
+                <div class="div-container">
+                    <button class="button"><a href="http://127.0.0.1:5000/Ajout_stock">Ajouter</a></button>
+                </div>
+
+                <div class="div-container2">
+                    <strong><p>Liste des stocks</p></strong>
+                </div>
+                <div class="main-container">
+                    <div class="main-liste">
+                        <table>
+                              <tr class="tete">
+                                <th>id</th>
+                                <th>Magasin</th>
+                                <th>Produit</th>
+                                <th>Quantité</th>
+                                <th>Action</th>
+                            </tr >
+                             {% for row in stock %}
+                            <tr>
+                                <td>{{row.Idstock}}</td>
+                                <td>{{row.NomMagasin}}</td>
+                                <td>{{row.NomProduit}}</td>
+                                <td>{{row.Quantitestock}}</td>
+                                <td>
+                                      <div class="action_container">
+                                        <button class="modif"><a href="/Modif_stock/{{row.Idstock}}">Modifier</a></button>
+                                        <button class="suppr"><a href="/sup_msgstock/{{row.Idstock}}">Supprimer</a></button>
+                                      </div>
+                                </td>
+                            </tr>
+                            {%endfor%}
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

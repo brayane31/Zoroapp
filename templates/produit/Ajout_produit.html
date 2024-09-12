@@ -18,20 +18,21 @@
                 <form action=" {{url_for('Ajoutproduit')}} " method="post">
                     <div class="form-headerA">
                         <div class="nameA">
-                            <div class="dA"><label for="Nom">Nom :</label></div>
+                            <div class="dA">Nom :</div>
                             <input class="Value" type="text" name="NomProduit" required>
                         </div>
                         <div class="nameA">
-                            <div class="dA"><label for="Categorie">Categorie :</label></div>
+                            <div class="dA">Categorie :</div>
                             <select class="Value" name="CatProduit" required>
                                 <option value="#" selected> Selectionnez une catégorie </option>
                                 <option value="Vetement" > Vetement </option>
                                 <option value="Accesoires" > Accesoires </option>
                                 <option value="Aliments" > Aliments </option>
+                                 <option value="Fruits" > Fruits </option>
                             </select>
                         </div>
                         <div class="nameA">
-                            <div class="dA"><label for="Prix">Prix :</label></div>
+                            <div class="dA">Prix :</div>
                             <input class="Value" type="number" name="PrixUnitaire" required>
                         </div>
 

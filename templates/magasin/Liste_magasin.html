@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste_magasin</title>
+    <link rel="stylesheet" href="static/Style.css">
+</head>
+<body>
+    <section class="header">
+        {%include '/partials/Header.html'%}
+        <div class="main-header2">
+             {%include './partials/Navbarmagasin.html'%}
+            <div class="header-container2">
+                <div class="div-container">
+                    <button class="button"><a href="http://127.0.0.1:5000/Ajout_magasin">Ajouter</a></button>
+                </div>
+
+                <div class="div-container2">
+                    <strong><p>Liste des Magasin</p></strong>
+                </div>
+                <div class="main-container">
+                    <div class="main-liste">
+                        <table>
+                              <tr class="tete">
+                                <th>id</th>
+                                <th>Nom</th>
+                                <th>Adresse</th>
+                                <th>Télephone</th>
+                                <th>Mail</th>
+                                <th>Action</th>
+                            </tr >
+                             {% for row in listemag %}
+                            <tr>
+                                <td>{{row.IdMagasin}}</td>
+                                <td>{{row.NomMagasin}}</td>
+                                <td>{{row.AdresseMagasin}}</td>
+                                <td>{{row.Telephone}}</td>
+                                <td>{{row.mail}}</td>
+                                <td>
+                                      <div class="action_container">
+                                        <button class="modif"><a href="/Modif_magasin/{{row.IdMagasin}}">Modifier</a></button>
+                                        <button class="suppr"><a href="/sup_msgmag/{{row.IdMagasin}}">Supprimer</a></button>
+                                      </div>
+                                </td>
+                            </tr>
+                            {%endfor%}
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
